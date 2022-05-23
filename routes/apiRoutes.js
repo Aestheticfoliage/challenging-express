@@ -4,11 +4,12 @@ const {
   readFromFile,
   readAndAppend,
   writeToFile,
+  readAndDelete,
 } = require("../helpers/fsUtils");
 
 router.get("/notes", (req, res) => {
-  readFromFile("./db/db.json").then(() => res.json(JSON.parse(data)));
-  res.json("get!");
+  let data = readFromFile("./db/db.json").then((data) => data);
+  res.send(data);
 });
 router.post("/notes", (req, res) => {
   const newNote = req.body;
@@ -16,6 +17,11 @@ router.post("/notes", (req, res) => {
 
   readAndAppend(newNote, "./db/db.json");
   res.json(newNote);
+});
+
+router.delete("/notes/:id", (req, res) => {
+  const filteredData = readAndDelete(newNote, "./db/db.json");
+  res.json(filteredData);
 });
 
 module.exports = router;

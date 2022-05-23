@@ -3,6 +3,7 @@ const fs = require("fs");
 // This package will be used to generate our unique id
 const uuidv1 = require("uuid/v1");
 const util = require("util");
+const { notStrictEqual } = require("assert");
 
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -26,7 +27,7 @@ class Store {
     }
     const newNote = { title, text, id: uuidv1() };
     this.getNotes().then((notes) => {
-      console.log(notes);
+      notes.push(newNote);
     });
   }
 }
