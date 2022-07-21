@@ -26,6 +26,7 @@ class Store {
       throw new Error("Title and text are required");
     }
     const newNote = { title, text, id: uuidv1() };
+
     this.getNotes().then((notes) => {
       notes.push(newNote);
     });

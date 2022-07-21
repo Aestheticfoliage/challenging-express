@@ -39,10 +39,10 @@ const readAndDelete = (id, file) => {
       const filteredData = parsedData.filter((note) => {
         return note.id !== id;
       });
-      writeToFile(file, filteredData);
-      return filteredData;
+      writeToFile(file, fiteredData);
+      // return filteredData;
     }
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete };

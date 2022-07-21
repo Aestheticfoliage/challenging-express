@@ -10,8 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "nodemon": "^2.0.16",
-    "uuidv4": "^6.2.13",
-    "heroku":"^7.60.2"
+    "nodemon": "^2.0.19",
+    "uuid": "^3.4.0"
   }
 }
