@@ -45,5 +45,10 @@
         "title": "test",
         "text": "please work",
         "id": "764ed2ed-ef90-4a18-a9d8-793dafb76e72"
+    },
+    {
+        "title": "new note",
+        "text": "loco",
+        "id": "c2d0d0c7-5c33-491d-a355-1576d22d2251"
     }
 ]
